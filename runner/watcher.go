@@ -5,8 +5,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/howeyc/fsnotify"
 	"log"
+
+	"github.com/howeyc/fsnotify"
 )
 
 func watchFolder(path string) {
@@ -50,15 +51,15 @@ func watch() {
 				if len(path) > 1 && strings.HasPrefix(filepath.Base(path), ".") {
 					return filepath.SkipDir
 				}
-	
+
 				if isIgnoredFolder(path) {
 					watcherLog("Ignoring %s", path)
 					return filepath.SkipDir
 				}
-	
+
 				watchFolder(path)
 			}
-	
+
 			return err
 		})
 	}

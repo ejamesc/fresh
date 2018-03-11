@@ -17,7 +17,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kana-sama/fresh/runner"
+	"github.com/ejamesc/fresh/runner"
 )
 
 func main() {
